@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
 	font-family: '616';
 	src: url('./616.eot');
@@ -8,4 +9,16 @@
 	font-family: '616' !important;
 }
 
+=======
+@font-face {
+	font-family: '616';
+	src: url('./616.eot');
+	src: local('616'), url('./616.woff') format('woff'), url('./616.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_6898">Text with this font applied</p> */
+.fontsforweb_fontid_6898 {
+	font-family: '616' !important;
+}
+
+>>>>>>> 09dd131290d4d98bd710b48fc05a15fb38af4ef6
 /* Font downloaded from FontsForWeb.com */
