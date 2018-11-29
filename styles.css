@@ -14,27 +14,49 @@ body {
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
+  border-radius: 10px;
+  border: 3px solid black;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .distributeBtn:hover {
   opacity: 1.0;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 .distributeButtonContainer {
   display: block;
   position: fixed;
-  top: 83%;
-  left: 84.5%;
-  z-index: 9;
+  top: 70%;
+  left: 42%;
 }
 
-.form-popup {
+.biddingFormContainer {
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  bottom: 22.5px;
+  left: 5%;
+  background: #ccc;
+  color: black;
+  padding: 5px 10px 5px 10px;
+  width: 10%;
+  border: 3px solid black;
+}
+
+.partnerFormContainer {
+  border-radius: 10px;
   display: none;
   position: fixed;
   bottom: 42.5%;
   right: 42.5%;
   z-index: 9;
   background: white;
+  border: 3px solid black;
 }
 
 select {
@@ -47,42 +69,64 @@ select {
     box-sizing: border-box;
 }
 
-
 .form-container {
   max-width: 300px;
   padding: 10px;
+  color: black;
 }
 
-
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-}
-
-
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-.btn {
+.partnerBtn {
+  border-radius: 5px;
   background-color: #4CAF50;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
   margin-bottom:10px;
+  margin-left: 5%;
   opacity: 0.8;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-
-.form-container .cancel {
-  background-color: red;
-}
-
-
-.btn:hover {
+.partnerBtn:hover {
   opacity: 1;
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
+
+.gameButtonContainer {
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  bottom: 27.5px;
+  right: 6%;
+  background: #ccc;
+  color: black;
+  padding: 5px 10px 5px 10px;
+  width: 10%;
+  border: 3px solid black;
+}
+
+.playButton {
+  border-radius: 5px;
+  background-color:whitesmoke;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom:10px;
+  margin-left: 5%;
+  opacity: 0.8;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.playButton:hover {
+  opacity: 1;
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
