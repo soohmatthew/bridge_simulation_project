@@ -7,21 +7,25 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-transform/1.0.4/d3-transform.js"></script>
 <script src ="lib/Backend Logic/bidding.js"></script>
 <script src ="lib/Backend Logic/shuffle_distribute.js"></script>
+<script src ="lib/Backend Logic/intelligence.js"></script>
 <link rel="stylesheet" href="styles.css" media="screen">
 
 </head>
 <!-- Set class to official for more formal font; unofficial for informal font -->
 <body>
 	<svg id="surface" width = 100% height = 100% xmlns="http://www.w3.org/2000/svg" version="1.1">
-		<foreignObject x="92.5%" y="95%" width="100" height="150" class = 'nextPlayer' opacity = '0'>
-		</foreignObject>
-		<foreignObject x="85%" y="95%" width="100" height="150" class = 'revealCards' opacity = '0'>
-		</foreignObject>
 	</svg>
 	<!--These are div classes containing the forms and buttons-->
 	<div class="gameButtonContainer" id="gameButtonContainer">
 		<button onclick="revealCards()" class="playButton">Reveal Cards</button>
 		<button onclick="nextPlayer()" class="playButton">Next Player</button>
+	</div>
+	<div class="gameButtonContainerS" id="gameButtonContainerS">
+		<button onclick="autoBid()" class="autoBidButton"><b>Start Automatic Bidding</b></button>
+	</div>
+	<div class="gameButtonContainerSP" id="gameButtonContainerSP">
+		<button onclick="autoPlay()" class="autoPlayButton"><b>Play with Animation</b></button>
+		<button onclick="autoPlayNA()" class="autoPlayButton"><b>Play without Animation</b></button>
 	</div>
 	<div class="biddingFormContainer", id = "biddingFormContainer">
 		<form id='biddingForm'>
@@ -46,7 +50,8 @@
 		</form>
 	</div>
 	<div class="distributeButtonContainer", id = "distributeButtonContainer">
-		<button onclick="distributeCards()" class="distributeBtn">Distribute Cards</button>
+		<button onclick="distributeCards()" class="distributeBtn">Distribute Cards (Game)</button>
+		<button onclick="distributeCardsS()" class="distributeBtn">Distribute Cards (Simulation)</button>
 	</div>
 	<div class="partnerFormContainer" id="partnerFormContainer">
 		<form class="form-container" id="partnerForm">
